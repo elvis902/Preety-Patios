@@ -1,0 +1,21 @@
+.footer__inner{
+    margin: 0;
+    padding: 0;
+    background-color: #272727;
+}
+.footer__socialLinks{
+    display: flex;
+}
+
+.footer__socialLink{
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.footer__quickLinks{
+
+}
+
+.footer__quickLink{
+    text-decoration: none;
+}

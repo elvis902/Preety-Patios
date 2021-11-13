@@ -1,0 +1,21 @@
+.profile > h1{
+    text-align: center;
+}
+
+.profile__info{
+    margin: 10px 30px;
+    border: 2px solid rgb(90, 89, 89);
+    
+}
+
+.profile__infoRow{
+    padding: 15px 15px;
+    border-bottom: 1px solid rgba(146, 145, 145, 0.822);
+    display: flex;
+    flex-direction: row;
+}
+
+.profile__infoRow > button{
+    margin-right: 0px;
+    margin-left: auto;
+}

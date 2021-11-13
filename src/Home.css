@@ -1,0 +1,29 @@
+.home{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 50px;
+}
+
+.home > h1{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.home__row{
+    display: grid;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    margin-left: 10px;
+    margin-right: 10px;
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, auto)); */
+}
+
+/* Screen larger than 600px? 2 column */
+@media (min-width: 600px) {
+    .home__row { grid-template-columns: repeat(2, 1fr); }
+  }
+  
+  /* Screen larger than 900px? 3 columns */
+  @media (min-width: 900px) {
+    .home__row { grid-template-columns: repeat(3, 1fr); }
+  }
