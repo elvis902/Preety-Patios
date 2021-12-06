@@ -6,6 +6,7 @@ import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket'
 import { useStateValue } from './ServiceProvider'
 import { auth } from './firebase';
 import {signOut } from '@firebase/auth'
+import logo from './logo.jpeg'
 
 function Header() {
     const [{basket, user}, dispatch] = useStateValue()
@@ -30,7 +31,7 @@ function Header() {
         <Link to='/'>
             <img 
              className ='header__logo'
-             src='https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg'
+             src={logo}
              alt=''
              />
         </Link>
@@ -64,7 +65,7 @@ function Header() {
                  </div>
              </Link>
 
-             <Link to='/checkout' className='header__link'>
+             <Link to= {user ? '/checkout' : '/login'} className='header__link'>
                  <div className='header__optionBasket'>
                      <ShoppingBasketIcon/>
                      <span className='header__optionLineTwo header__basketCount'>{basket.length}</span>

@@ -5,6 +5,7 @@ import { createUserWithEmailAndPassword  } from "firebase/auth";
 import {auth, database} from './firebase'
 import { ref, set, push, child } from "firebase/database";
 import { useStateValue } from './ServiceProvider'
+import logo from './logo.jpeg'
 
 function Register() {
     const history = useHistory()
@@ -54,7 +55,7 @@ function Register() {
         <Link to='/'>
             <img
             className='register__logo'
-              src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/263px-Amazon_logo.svg.png'
+              src={logo}
               alt=''
             />
         </Link>
