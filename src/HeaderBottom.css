@@ -1,0 +1,33 @@
+
+.nav1{
+    display: flex;
+    align-items: center;
+    /* gap: 2vw; */
+    font-size: 1.1em;
+    font-weight: 500;
+    /* color: rgb(218, 109, 66); */
+    background-color: rgb(255, 255, 255);
+    border-bottom: rgb(255, 205, 186) solid 1.5px;
+    color: grey;
+}
+
+.nav1__linksLeft{
+    display: flex;
+    flex: 1;
+    padding: 10px 20px;
+}
+
+.nav1__linksRight{
+    display: flex;
+    padding: 10px 20px;
+    /* color: rgba(107, 31, 1, 0.75) */
+
+}
+
+.nav1__linksLeft > span{
+    padding-right: 15px;
+}
+
+.nav1__linksRight > span{
+    padding-left: 15px;
+}

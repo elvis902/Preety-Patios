@@ -12,6 +12,9 @@ import Footer from './Footer';
 import Profile from './Profile';
 import Register from './Register';
 import { ref, onValue} from "firebase/database";
+import HeaderTop from './HeaderTop'
+import HeaderMain from './HeaderMain'
+import HeaderBottom from './HeaderBottom'
 
 
 function App() {
@@ -47,18 +50,24 @@ function App() {
                <Login/>
             </Route>
             <Route path = "/checkout">
-               <Header/>
+              <HeaderTop/>
+              <HeaderMain/>
+              <HeaderBottom/>
                <Checkout/>
             </Route>
             <Route path = "/profile">
-               <Header/>
+              <HeaderTop/>
+              <HeaderMain/>
+              <HeaderBottom/>
                <Profile/>
             </Route>
             <Route path = "/register">
                <Register/>
             </Route>
             <Route path = "/">
-              <Header/>
+              <HeaderTop/>
+              <HeaderMain/>
+              <HeaderBottom/>
               <Home/>
               <Footer/>
             </Route>

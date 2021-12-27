@@ -1,0 +1,34 @@
+
+.nav0{
+    display: flex;
+    align-items: center;
+    height: 20px;
+    color: black;
+    font-weight: 200;
+    /* background-color: rgba(247, 185, 127, 0.966); */
+    /* background-color: whitesmoke; */
+    /* background-color:  rgb(255, 249, 221); */
+
+}
+
+.nav0__linksLeft{
+    display: flex;
+    flex: 1;
+    padding: 10px 20px;
+}
+
+.nav0__linksLeft > span{
+    padding-right: 15px;
+}
+
+.nav0__linksRight{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.nav0__linksRight > a > img{
+    height: 14px;
+    padding-right: 15px;
+    padding-top: 2px;
+}

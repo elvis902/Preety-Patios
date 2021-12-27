@@ -1,0 +1,113 @@
+
+.mainNav{
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(to bottom right, rgb(255, 249, 221), rgb(238, 233, 224));
+    height: 75px;
+    justify-content:space-between;
+      /* position: -webkit-sticky; */
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    
+}
+
+.mainNav__logo{
+    display: flex;
+}
+
+.mainNav__logo > img{
+    width: 180px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.mainNav__inputSearch{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-grow: 1;
+}
+
+
+.mainNav__inputSearch > input{
+    height: 35px;
+    border: none;
+    border-radius: 20px;
+    width: 100%;
+    padding: 20px;
+}
+.mainNav__inputSearch > img{
+    padding: 7.5px;
+    margin: 0 18px 0 8px;
+    background: white;
+    border-radius: 50%;
+    height: 25px;
+}
+
+.mainNav__links{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+}
+
+
+.mainNav__links  img{
+    height: 35px;
+}
+
+.header_link{
+    color: grey;
+    text-decoration: none;
+}
+
+.myAccount{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.myAccount > img{
+    opacity: 0.75;
+}
+
+.myAccount__profile{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-left: 8px;
+    padding-right: 12px;
+    font-weight: bold;
+    color: grey;
+    text-decoration: none;
+}
+
+.myAccount__login{
+    text-align: left;
+    padding-left: 8px;
+    padding-right: 12px;
+    font-weight: bold;
+    color: grey;
+    text-decoration: none;
+}
+
+
+.basket{
+    display: flex;
+    padding-right: 10px;
+    align-items: center;
+    text-decoration: none;
+}
+
+.basket > img{
+    opacity: 0.75;
+}
+
+.basket__number{
+    padding-right: 5px;
+    padding-left: 3px;
+    margin: 0 5px 10px 0px;
+    text-decoration: none;
+}
+

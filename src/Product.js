@@ -6,8 +6,16 @@ import { ref, push, set, child } from "firebase/database";
 import {database} from './firebase'
 
 function Product({product}) {
-    const [{user}, dispatch] = useStateValue()
+    const [{user, basket}, dispatch] = useStateValue()
 
+    const productAlreadyInBasket = () => {
+        for(let i = 0; i < basket.length; ++i){
+            if(basket[i].id === product.id){
+                return true;
+            }     
+        }
+        return false;
+    }
     const addToBasket = () => {
         // dispatch({
         //     type: "ADD_TO_BASKET",
@@ -21,7 +29,10 @@ function Product({product}) {
         //  }
         // )
         if(!user) return;
-       // const newAddKey = push(child(ref(database), 'users/'+user.uid+'/basket')).key;
+        const flag = productAlreadyInBasket();
+        if(flag === true){
+            return;
+        }
         const postAddIdRef = ref(database, 'users/'+user.uid+'/basket');
         const newpostAddIdRef = push(postAddIdRef);
         set(newpostAddIdRef, product.id );
