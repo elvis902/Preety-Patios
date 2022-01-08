@@ -17,7 +17,12 @@ function Product({product}) {
         return false;
     }
     const addToBasket = () => {
-        // dispatch({
+        if(!user) return;
+        const flag = productAlreadyInBasket();
+        if(flag === true){
+            return;
+        }
+          // dispatch({
         //     type: "ADD_TO_BASKET",
         //     item: {
         //         id: product.id,
@@ -28,15 +33,10 @@ function Product({product}) {
         //     }
         //  }
         // )
-        if(!user) return;
-        const flag = productAlreadyInBasket();
-        if(flag === true){
-            return;
-        }
         const postAddIdRef = ref(database, 'users/'+user.uid+'/basket');
         const newpostAddIdRef = push(postAddIdRef);
         set(newpostAddIdRef, product.id );
-       // console.log(newAddKey)
+        console.log("Item Added From Home");
 
     }
 

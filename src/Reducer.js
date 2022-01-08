@@ -1,5 +1,5 @@
 import {database} from './firebase'
-import { ref, onValue, off} from "firebase/database";
+import { ref, onValue, off, remove} from "firebase/database";
 
 export const initialState = {
     basket: [],
@@ -11,16 +11,15 @@ export const getBasketTotal = (basket) =>
   basket?.reduce((amount, item) => item.price+amount, 0);
 
 function  removeItemFromDatabase(userId, productId){
-    console.log("I am inside the req function")
     const path = 'users/'+userId + "/basket";
     const userRef = ref(database, path);
     onValue(userRef, (snapshot)=>{
         snapshot.forEach(snap =>{
             if(snap.val() === productId){
                 const delPath = 'users/'+userId + "/basket/" + snap.key;
-                // const delRef = ref(database, delPath);
-                // delRef.remove();
-                console.log(delPath);
+                const delRef = ref(database, delPath);
+                remove(delRef);
+                off(userRef);
                 return;
             }
         });
@@ -71,11 +70,11 @@ function reducer(state, action){
             if(index >= 0){
                 let userId = state.user.uid;
                 let productId = newBasket[index].id;
+
                 //item exist in basket, remove it
                 newBasket.splice(index, 1);
+
                 //item remove from database
-                console.log(userId)
-                console.log(productId)
                 removeItemFromDatabase(userId, productId);
             }else{
                 console.warn(
