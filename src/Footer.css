@@ -1,21 +1,98 @@
-.footer__inner{
+.footer  ul {
     margin: 0;
     padding: 0;
-    background-color: #272727;
 }
-.footer__socialLinks{
+
+.footer__links{
+    background: rgb(28, 14, 43);
+    /* border-radius: .7rem .7rem 0 0; */       /*Rounded top corners if you want*/
+    box-shadow: -4px -4px 0px rgb(255, 194, 144);
+
+}
+
+.footer__container{
     display: flex;
+    flex-direction: row;
+    padding: 30px;
+    padding-top: 50px;
+    
 }
 
-.footer__socialLink{
-    text-decoration: none;
-    padding: 10px 20px;
+.footer__heading{
+    display: flex;
+    flex-direction: column;
+    flex: auto;
 }
 
-.footer__quickLinks{
-
+.footer__socialMediaLogos{
+    display: flex;
+    flex-direction: column;
+    flex: auto;
 }
 
-.footer__quickLink{
-    text-decoration: none;
+.footer__lists{
+    /* display: flex; */
+    /* justify-content: center; */
+    align-items: center;
+    /* flex-wrap: wrap; */
+    color: rgb(188, 191, 209);
 }
+
+.footer__lists ul {
+    list-style: none;
+    margin: 20px;
+    padding: 20px;
+}
+
+.footer__lists ul li{
+    padding: 5px;
+}
+
+.footer__heading h2, .footer__socialMediaLogos h2{
+    font-weight: normal;
+    color: rgb(188, 191, 209);
+}
+
+.footer__socialMediaLogos a{
+    margin: 20px;
+    display: inline-block;
+}
+
+.footer__socialMediaLogos img{
+    width: 1.5em;
+    padding: .2em;
+}
+
+.sm__links{
+    list-style: none;
+    display: flex;
+    /* justify-content: center; */
+    align-items: flex-start;
+    height: 80%;
+    flex-wrap: wrap;
+    
+}
+
+.footer__heading h2{
+    padding-left:1.8em;
+}
+
+.footer__socialMediaLogos h2{
+    padding-left: 0.8em;
+}
+
+
+.footer__verticalRuler{
+    border-left: solid rgba(187, 186, 196, 0.295) .5px;
+    height: 16rem;          /*You can cange the height*/
+    width: .5px;
+    align-self: center;
+}
+
+.footer__copyright{
+    color: rgba(188, 191, 209, 0.445);
+    text-align: center;
+    padding: 15px;
+    font-size: .8rem;
+}
+
